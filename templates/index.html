@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Stroke Prediction</title>
+    <link rel = "stylesheet" href = "{{url_for('static', filename = 'css/style.css')}}">
+
+</head>
+
+<h1>Stroke Prediction</h1>
+
+<body>
+    <form action="{{ url_for('predict')}}" method="post">
+    <br>
+    <input type="text" id="age" name ="age" placeholder="Age" required="required">
+
+    <input type="text" id="bmi" name ="bmi" placeholder="BMI" required="required"><br>
+
+    <p>Ever had a heart disease:</p>
+    <input type="radio" id="heart_disease" name="heart_disease" value=1>
+    <label for="male">Yes</label>
+    <input type="radio" id="heart_disease" name="heart_disease" value=0>
+    <label for="female">No</label><br>
+
+    <p>Ever got married:</p>
+    <input type="radio" id="married" name="married" value=1>
+    <label for="male">Yes</label>
+    <input type="radio" id="married" name="married" value=0>
+    <label for="female">No</label><br><br>
+
+    <button type="Predict" class="btn btn-primary">Predict</button>
+    </form><br>
+    {{features_result}}
+</body>
+
+</html>
