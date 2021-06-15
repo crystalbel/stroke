@@ -2,5 +2,5 @@ import requests
 
 url = 'http://127.0.0.1:5000/results'
 
-r = requests.post(url, json={'gender': 1, 'married': 1, 'residence_type': 1, 'hypertension': 1, 'heart_disease':1, 'work_type': 1, 'smoking_status':2})
+r = requests.post(url, json={'age': 40, 'bmi':20, 'heart_disease':1, 'married':1})
 print(r.json())
