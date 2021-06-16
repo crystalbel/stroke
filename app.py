@@ -8,7 +8,6 @@ from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
-# scaler = pickle.load(open('scaler.pkl', 'rb'))
 
 @app.route('/')
 def home():
